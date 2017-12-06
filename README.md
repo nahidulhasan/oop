@@ -52,6 +52,7 @@ class UsersController
         $this->logger->execute($user);
     }
 }
+
 $controller = new UsersController(new LogToFile);
 $controller->show();
 
@@ -82,6 +83,7 @@ interface Logger
 {
     public function execute($message);
 }
+
 class LogToDatabase implements Logger 
 {
     public function execute($message){
@@ -180,6 +182,7 @@ class Tea
         var_dump('Add proper amount of Milk');
         return $this;
     }
+    
     public function make()
     {
         return $this
@@ -189,6 +192,7 @@ class Tea
             ->addMilk();
     }
 }
+
 $tea = new Tea();
 $tea->make();
 
@@ -204,6 +208,7 @@ class Coffee
         var_dump('Add proper amount of tea');
         return $this;
     }
+    
     protected  function  addHotWater()
     {
         var_dump('Pour Hot water into cup');
@@ -221,6 +226,7 @@ class Coffee
         var_dump('Add proper amount of Milk');
         return $this;
     }
+    
     public function make()
     {
         return $this
@@ -230,6 +236,7 @@ class Coffee
             ->addMilk();
     }
 }
+
 $tea = new Coffee();
 $tea->make();
 
@@ -290,6 +297,7 @@ class Coffee extends Template
         return $this;
     }
 }
+
 $coffee = new Coffee();
 $coffee->make();
 
