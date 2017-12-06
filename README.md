@@ -28,6 +28,7 @@ class LogToDatabase
         var_dump('log the message to a database :'.$message);
     }
 }
+
 class LogToFile 
 {
     public function execute($message)
@@ -35,6 +36,7 @@ class LogToFile
         var_dump('log the message to a file :'.$message);
     }
 }
+
 class UsersController 
 { 
     protected $logger;
@@ -86,6 +88,7 @@ class LogToDatabase implements Logger
         var_dump('log the message to a database :'.$message);
     }
 }
+
 class LogToFile implements Logger 
 {
     public function execute($message) 
@@ -93,6 +96,7 @@ class LogToFile implements Logger
         var_dump('log the message to a file :'.$message);
     }
 }
+
 class UsersController 
 {
     protected $logger;
@@ -108,6 +112,7 @@ class UsersController
         $this->logger->execute($user);
     }
 }
+
 $controller = new UsersController(new LogToDatabase);
 $controller->show();
 
@@ -273,6 +278,7 @@ class Tea extends Template
         return $this;
     }
 }
+
 $tea = new Tea();
 $tea->make();
 
