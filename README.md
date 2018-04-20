@@ -57,7 +57,7 @@ $controller = new UsersController(new LogToFile);
 $controller->show();
 ```
 
-In the above example I do not use interface. I write to the log using the LogToFile class. But now if I want to write a log using LogToDatabase I have to change hard coded class referance in the above code on line number 23. That line code in below :
+In the above example I do not use interface. I write to the log using the LogToFile class. But now if I want to write a log using LogToDatabase I have to change hard coded class reference in the above code on line number 23. That line code in below :
 
 ```php
 public function __construct(LogToFile $logger)
@@ -116,7 +116,7 @@ $controller = new UsersController(new LogToDatabase);
 $controller->show();
 ```
 
-Now If I change from LogToDatabase to LogToFile I do not have to change the constructor method manually. In the constructor method I have Injected an interface; not any arbitrary class. So If you have multiple classes and swap from one class to another class you will get the same result without changing any class referances.
+Now If I change from LogToDatabase to LogToFile I do not have to change the constructor method manually. In the constructor method I have Injected an interface; not any arbitrary class. So If you have multiple classes and swap from one class to another class you will get the same result without changing any class references.
 
 In the above example I write a log using LogToDatabase and now I want to write log using LogToFile, I can call it in this way
 
