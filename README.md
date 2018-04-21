@@ -166,9 +166,9 @@ class Tea
         return $this;
     }
     
-    protected  function addSuger()
+    protected  function addSugar()
     {
-        var_dump('Add proper amount of suger');
+        var_dump('Add proper amount of sugar');
         return $this;
     }
     
@@ -182,7 +182,7 @@ class Tea
     {
         return $this
             ->addHotWater()
-            ->addSuger()
+            ->addSugar()
             ->addTea()
             ->addMilk();
     }
@@ -210,9 +210,9 @@ class Coffee
         return $this;
     }
     
-    protected  function addSuger()
+    protected  function addSugar()
     {
-        var_dump('Add proper amount of suger');
+        var_dump('Add proper amount of sugar');
         return $this;
     }
     
@@ -226,7 +226,7 @@ class Coffee
     {
         return $this
             ->addHotWater()
-            ->addSuger()
+            ->addSugar()
             ->addCoffee()
             ->addMilk();
     }
@@ -236,7 +236,7 @@ $tea = new Coffee();
 $tea->make();
 ```
 
-In the above two classes the three methods addHotWater(), addSuger(), and addMilk() are same. So we should remove duplicated code. We can do it in the following way :
+In the above two classes the three methods addHotWater(), addSugar(), and addMilk() are same. So we should remove duplicated code. We can do it in the following way :
 
 ```php
 abstract class Template
@@ -245,7 +245,7 @@ abstract class Template
     {
         return $this
             ->addHotWater()
-            ->addSuger()
+            ->addSugar()
             ->addPrimaryToppings()
             ->addMilk();
     }
@@ -256,9 +256,9 @@ abstract class Template
         return $this;
     }
     
-    protected  function addSuger()
+    protected  function addSugar()
     {
-        var_dump('Add proper amount of suger');
+        var_dump('Add proper amount of sugar');
         return $this;
     }
     
@@ -296,7 +296,7 @@ $coffee = new Coffee();
 $coffee->make();
 ```
 
-I make an abstract class and name it Template. Here I define addHotWater(), addSuger() and addMilk(); and make an abstract method named addPrimaryToppings.
+I make an abstract class and name it Template. Here I define addHotWater(), addSugar() and addMilk(); and make an abstract method named addPrimaryToppings.
 
 Now If I make the Tea class extend the Template class then I will get the three defined methods and must define the addPrimaryToppings() method. In a similar way the coffee class will as well.
 
