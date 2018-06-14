@@ -300,4 +300,6 @@ I make an abstract class and name it Template. Here I define addHotWater(), addS
 
 Now If I make the Tea class extend the Template class then I will get the three defined methods and must define the addPrimaryToppings() method. In a similar way the coffee class will as well.
 
+I have published this article in the medium. if you’d like to read from the medium blog site, please go to this [link](https://medium.com/@NahidulHasan/understanding-use-of-interface-and-abstract-class-9a82f5f15837)
+
 Thanks for reading.
